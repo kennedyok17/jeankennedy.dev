@@ -1,38 +1,47 @@
 import "./Hero.css";
 
 function Hero() {
-  return (
-    <section className="hero">
+    return (
+        <section className="hero">
 
-      <p className="hero-tag">
-        Bienvenido a mi portafolio
-      </p>
+            <div className="hero-light"></div>
+            <div className="hero-grid"></div>
 
-      <h1>
-        Hola, soy <span>Jean Kennedy</span>
-      </h1>
+            <div className="hero-content">
 
-      <h2>
-        Intento de Desarrollador
-      </h2>
+                <p className="hero-tag">
+                    Bienvenido a mi portafolio
+                </p>
 
-      <p className="hero-description">
-        Desarrollando aplicaciones web utilizando
-        Java, Spring Boot, React y MySQL.
-      </p>
+                <h1>
+                    Hola, soy <span>Jean Kennedy</span>
+                </h1>
 
-      <div className="hero-buttons">
-        <button className="btn-primary">
-          Ver proyectos
-        </button>
+                <h2>
+                    Intento de Desarrollador
+                </h2>
 
-        <button className="btn-secondary">
-          Descargar CV
-        </button>
-      </div>
+                <p className="hero-description">
+                    Desarrollando aplicaciones web utilizando
+                    Java, Spring Boot, React y MySQL.
+                </p>
 
-    </section>
-  );
+                <div className="hero-buttons">
+
+                    <button className="btn-primary">
+                        Ver proyectos
+                    </button>
+
+                    <button className="btn-secondary">
+                        Contacto
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+    );
 }
 
 export default Hero;
