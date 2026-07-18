@@ -1,0 +1,115 @@
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-tag {
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+
+    font-size: .95rem;
+
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+
+    color: var(--primary);
+}
+
+.hero h2 {
+
+    font-size: 2rem;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 30px;
+}
+
+.hero-description {
+
+    max-width: 700px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+}
+
+.hero-buttons {
+
+    margin-top: 50px;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+
+    padding: 16px 34px;
+
+    border-radius: var(--radius);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    font-size: 1rem;
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+}
+
+.btn-primary:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    color: white;
+}
+
+.btn-secondary:hover {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
