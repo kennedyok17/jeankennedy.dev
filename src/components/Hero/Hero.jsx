@@ -1,4 +1,5 @@
 import "./Hero.css";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 function Hero() {
     return (
@@ -37,6 +38,7 @@ function Hero() {
                     </button>
 
                 </div>
+                <SocialLinks />
 
             </div>
 

@@ -1,0 +1,51 @@
+.social-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:45px;
+}
+
+.social-links a{
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    color:var(--text-primary);
+
+    border:1px solid var(--border);
+
+    background:var(--glass);
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+}
+
+.social-links a svg{
+
+    font-size:1.35rem;
+}
+
+.social-links a:hover{
+
+    color:var(--primary);
+
+    border-color:var(--primary);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px var(--shadow);
+}
