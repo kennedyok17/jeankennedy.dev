@@ -8,6 +8,7 @@ function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState("");
 
     useEffect(() => {
 
@@ -24,29 +25,84 @@ function Navbar() {
 
     }, []);
 
+    useEffect(() => {
+
+        const sections = document.querySelectorAll("section[id]");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        setActiveSection(entry.target.id);
+
+                    }
+
+                });
+
+            },
+            { rootMargin: "-40% 0px -55% 0px" }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+
+    }, []);
+
     return (
 
         <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
 
             <div className="navbar-container">
 
-                <div className="logo">
+                <a
+                    href="#"
+                    className="logo"
+                    onClick={() => setMenuOpen(false)}
+                >
 
-                    <img src={logo} alt="Logo JK" />
+                    <img src={logo} alt="Logo JK" loading="lazy" decoding="async" />
 
                     <span>Jean Kennedy</span>
 
-                </div>
+                </a>
 
                 <nav className={menuOpen ? "nav-links active" : "nav-links"}>
 
-                    <a href="#about" onClick={() => setMenuOpen(false)}>Sobre mí</a>
+                    <a
+                        href="#about"
+                        className={activeSection === "about" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Sobre mí
+                    </a>
 
-                    <a href="#technologies" onClick={() => setMenuOpen(false)}>Tecnologías</a>
+                    <a
+                        href="#technologies"
+                        className={activeSection === "technologies" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Tecnologías
+                    </a>
 
-                    <a href="#projects" onClick={() => setMenuOpen(false)}>Proyectos</a>
+                    <a
+                        href="#projects"
+                        className={activeSection === "projects" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Proyectos
+                    </a>
 
-                    <a href="#contact" onClick={() => setMenuOpen(false)}>Contacto</a>
+                    <a
+                        href="#contact"
+                        className={activeSection === "contact" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Contacto
+                    </a>
 
                 </nav>
 

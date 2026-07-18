@@ -45,7 +45,7 @@ function Footer(){
 
                 <span>
 
-                    © 2026 Jean Kennedy.
+                    © {new Date().getFullYear()} Jean Kennedy.
                     Todos los derechos reservados.
 
                 </span>

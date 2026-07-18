@@ -35,7 +35,7 @@ function SocialLinks() {
                 <FaLinkedin />
             </a>
 
-            <a href="jeankennedyortizvelasquez@gmail.com">
+            <a href="mailto:jeankennedyortizvelasquez@gmail.com">
                 <MdEmail />
             </a>
 

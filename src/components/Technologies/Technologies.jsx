@@ -14,7 +14,9 @@ import {
     SiMysql,
     SiJavascript,
     SiHtml5,
-    SiCss
+    SiCss,
+    SiPhp,
+    SiPython
 } from "react-icons/si";
 
 function Technologies() {
@@ -24,49 +26,61 @@ function Technologies() {
             icon: <FaJava />,
             title: "Java",
             description: "Backend Development",
-            level: "95%"
+            level: "46%"
         },
         {
             icon: <SiSpringboot />,
             title: "Spring Boot",
             description: "REST APIs",
-            level: "90%"
+            level: "42%"
         },
         {
             icon: <FaReact />,
             title: "React",
             description: "Modern Frontend",
-            level: "85%"
+            level: "50%"
         },
         {
             icon: <SiMysql />,
             title: "MySQL",
             description: "Database",
-            level: "88%"
+            level: "48%"
         },
         {
             icon: <SiJavascript />,
             title: "JavaScript",
             description: "Web Development",
-            level: "85%"
+            level: "45%"
         },
         {
             icon: <SiHtml5 />,
             title: "HTML5",
             description: "Markup",
-            level: "95%"
+            level: "55%"
         },
         {
             icon: <SiCss />,
             title: "CSS3",
             description: "Responsive Design",
-            level: "90%"
+            level: "50%"
         },
         {
             icon: <FaGitAlt />,
             title: "Git",
             description: "Version Control",
-            level: "85%"
+            level: "42%"
+        },
+        {
+            icon: <SiPhp />,
+            title: "PHP",
+            description: "Backend Development",
+            level: "35%"
+        },
+        {
+            icon: <SiPython />,
+            title: "Python",
+            description: "Scripting & Datos",
+            level: "35%"
         }
     ];
 
@@ -82,7 +96,7 @@ function Technologies() {
                         Tecnologías
                     </span>
 
-                    <h2>
+                    <h2 className="section-title">
                         Herramientas con las que desarrollo
                     </h2>
 

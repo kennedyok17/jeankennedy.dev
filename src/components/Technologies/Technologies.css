@@ -39,14 +39,22 @@
 
 .tech-grid{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    flex-wrap:wrap;
+
+    justify-content:center;
 
     gap:30px;
 }
 
 .tech-card{
+
+    flex:1 1 260px;
+
+    max-width:320px;
+
+    text-align:center;
 
     background:var(--glass);
 
@@ -54,7 +62,7 @@
 
     backdrop-filter:blur(18px);
 
-    border-radius:20px;
+    border-radius:var(--radius-md);
 
     padding:35px;
 

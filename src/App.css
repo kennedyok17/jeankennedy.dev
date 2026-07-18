@@ -14,6 +14,75 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ============================= */
+/* SELECCIÓN Y SCROLLBAR         */
+/* ============================= */
+
+::selection {
+
+    background: var(--primary);
+
+    color: #08120f;
+}
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: rgba(45, 212, 191, .35);
+
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--primary);
+}
+
+/* ============================= */
+/* ACCESIBILIDAD                 */
+/* ============================= */
+
+button:focus-visible,
+a:focus-visible {
+
+    outline: 2px solid var(--primary);
+
+    outline-offset: 4px;
+
+    border-radius: 8px;
+}
+
+button,
+a,
+input,
+.project-card,
+.tech-card {
+
+    transition: .3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
+
 body {
 
     position: relative;
@@ -25,14 +94,58 @@ body {
     overflow-x: hidden;
 
     background:
-        radial-gradient(circle at top,
-            rgba(45, 212, 134, 0.315),
-            transparent 45%),
-        radial-gradient(circle at bottom,
-            rgba(45, 212, 191, 0.08),
-            transparent 55%),
+        radial-gradient(circle at 15% 20%,
+            rgba(45, 212, 191, .08),
+            transparent 35%),
+        radial-gradient(circle at 85% 15%,
+            rgba(94, 234, 212, .05),
+            transparent 30%),
+        radial-gradient(circle at 50% 80%,
+            rgba(20, 184, 166, .06),
+            transparent 40%),
         var(--background);
 
+}
+
+.cursor-spotlight {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(45, 212, 191, .09),
+        transparent 280px
+    );
+}
+
+.section-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+
+    height: 4px;
+
+    margin-top: 14px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.section-header .section-title::after {
+
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
 body::after {
@@ -73,5 +186,9 @@ body::after {
 
     --shadow: rgba(45,212,191,.18);
     --glass: rgba(255,255,255,.04);
+
+    --radius-sm: 14px;
+    --radius-md: 18px;
+    --radius-lg: 24px;
 
 }

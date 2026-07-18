@@ -22,7 +22,7 @@ function About() {
                         Sobre mí
                     </span>
 
-                    <h2>
+                    <h2 className="section-title">
                         Construyendo soluciones web modernas
                     </h2>
 

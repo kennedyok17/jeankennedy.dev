@@ -59,7 +59,7 @@
 
     border:1px solid var(--border);
 
-    border-radius:18px;
+    border-radius:var(--radius-md);
 
     text-decoration:none;
 

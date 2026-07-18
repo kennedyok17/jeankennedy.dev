@@ -68,6 +68,8 @@ function ProjectCard({ project }) {
                             key={currentImage}
                             src={project.screenshots[currentImage].src}
                             alt={`${project.title} - ${project.screenshots[currentImage].label}`}
+                            loading="lazy"
+                            decoding="async"
                             initial={{ opacity:0, scale:.97 }}
                             animate={{ opacity:1, scale:1 }}
                             exit={{ opacity:0, scale:.97 }}
@@ -89,7 +91,7 @@ function ProjectCard({ project }) {
                             onClick={() => setCurrentImage(i)}
                             aria-label={shot.label}
                         >
-                            <img src={shot.src} alt={shot.label} />
+                            <img src={shot.src} alt={shot.label} loading="lazy" decoding="async" />
                         </button>
 
                     ))}
@@ -190,7 +192,7 @@ function Projects() {
                         Proyectos
                     </span>
 
-                    <h2>
+                    <h2 className="section-title">
                         Algunos de mis trabajos
                     </h2>
 

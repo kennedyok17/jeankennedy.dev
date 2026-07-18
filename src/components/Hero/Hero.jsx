@@ -40,13 +40,13 @@ function Hero() {
 
                     <div className="hero-buttons">
 
-                        <button className="btn-primary">
+                        <a href="#projects" className="btn-primary">
                             Ver proyectos
-                        </button>
+                        </a>
 
-                        <button className="btn-secondary">
+                        <a href="#contact" className="btn-secondary">
                             Contacto
-                        </button>
+                        </a>
 
                     </div>
 
@@ -67,6 +67,8 @@ function Hero() {
                         <img
                             src={profile}
                             alt="Jean Kennedy"
+                            fetchPriority="high"
+                            decoding="async"
                         />
 
                     </div>
