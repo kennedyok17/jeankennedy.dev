@@ -16,6 +16,8 @@ html {
 
 body {
 
+    position: relative;
+
     font-family: Inter, Arial, Helvetica, sans-serif;
 
     color: var(--text-primary);
@@ -26,8 +28,30 @@ body {
         radial-gradient(circle at top,
             rgba(45, 212, 134, 0.315),
             transparent 45%),
+        radial-gradient(circle at bottom,
+            rgba(45, 212, 191, 0.08),
+            transparent 55%),
         var(--background);
 
+}
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: .035;
+
+    mix-blend-mode: overlay;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 /* ============================= */
 /* VARIABLES                     */

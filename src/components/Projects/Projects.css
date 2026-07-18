@@ -21,6 +21,10 @@
 
 .project-card{
 
+    position:relative;
+
+    overflow:hidden;
+
     padding:30px;
 
     background:var(--glass);
@@ -41,6 +45,39 @@
     box-shadow:
         0 0 0 1px rgba(45,212,191,.15),
         0 20px 50px rgba(45,212,191,.10);
+}
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:50%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+    pointer-events:none;
+}
+
+.project-card:hover::before{
+
+    left:170%;
 }
 
 .project-media{
@@ -72,53 +109,108 @@
     object-fit:contain;
 }
 
-.project-gallery{
+.project-thumbs{
 
     display:flex;
 
     justify-content:center;
 
-    gap:10px;
+    gap:12px;
 
     margin-top:20px;
+
+    flex-wrap:wrap;
 }
 
-.project-gallery button{
+.project-thumbs button{
 
-    background:transparent;
+    width:110px;
 
-    border:1px solid var(--border);
+    aspect-ratio:1.9/1;
 
-    color:var(--text-secondary);
+    padding:0;
 
-    padding:8px 14px;
+    overflow:hidden;
 
-    border-radius:999px;
+    background:var(--surface);
+
+    border:2px solid transparent;
+
+    border-radius:10px;
 
     cursor:pointer;
+
+    opacity:.6;
 
     transition:.3s;
 }
 
-.project-gallery button:hover{
+.project-thumbs button img{
 
-    color:var(--primary);
+    width:100%;
 
-    border-color:var(--primary);
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 }
 
-.project-gallery button.active{
+.project-thumbs button:hover{
 
-    color:var(--primary);
+    opacity:.85;
+
+    border-color:var(--border);
+}
+
+.project-thumbs button.active{
+
+    opacity:1;
 
     border-color:var(--primary);
-
-    background:rgba(45,212,191,.08);
 }
 
 .project-content{
 
     margin-top:30px;
+}
+
+.project-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(45,212,191,.08);
+
+    border:1px solid rgba(45,212,191,.25);
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    font-size:.9rem;
+}
+
+.project-status::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#2DD4BF;
+
+    box-shadow:0 0 15px #2DD4BF;
 }
 
 .project-content h3{
@@ -139,29 +231,113 @@
 
 .project-features{
 
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:12px;
-
-    margin:25px 0;
-
-    color:var(--text-secondary);
-}
-
-.project-tags{
-
     display:flex;
 
     flex-wrap:wrap;
 
     gap:10px;
 
-    margin-bottom:30px;
+    margin:25px 0;
 }
 
-.project-tags span{
+.feature-chip{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    color:var(--text-secondary);
+
+    font-size:.9rem;
+
+    transition:.3s;
+}
+
+.feature-chip:hover{
+
+    color:var(--primary);
+
+    border-color:var(--primary);
+
+    background:rgba(45,212,191,.08);
+}
+
+/* ============================= */
+/* ARQUITECTURA */
+/* ============================= */
+
+.project-architecture{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin:30px 0;
+
+    padding:24px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+}
+
+.arch-layer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    width:100%;
+}
+
+.arch-layer:not(:last-child)::after{
+
+    content:"↓";
+
+    color:var(--text-secondary);
+
+    font-size:1.1rem;
+
+    margin:4px 0;
+}
+
+.arch-layer-name{
+
+    color:var(--text-secondary);
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.arch-layer-items{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+}
+
+.arch-layer-items span{
 
     padding:8px 14px;
 
@@ -174,4 +350,53 @@
     border:1px solid rgba(45,212,191,.25);
 
     font-size:.9rem;
+}
+
+/* ============================= */
+/* ESTADÍSTICAS */
+/* ============================= */
+
+.project-stats{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:10px;
+}
+
+.stat{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:0 12px;
+}
+
+.stat:not(:first-child){
+
+    border-left:1px solid var(--border);
+}
+
+.stat strong{
+
+    font-size:1.4rem;
+
+    color:var(--primary);
+}
+
+.stat span{
+
+    color:var(--text-secondary);
+
+    font-size:.85rem;
+
+    margin-top:4px;
 }

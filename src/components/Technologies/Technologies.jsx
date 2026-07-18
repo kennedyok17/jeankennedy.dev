@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
+
 import "./Technologies.css";
+import { fadeUp, staggerContainer } from "../../animations";
 
 import {
     FaJava,
@@ -90,11 +93,21 @@ function Technologies() {
 
                 </div>
 
-                <div className="tech-grid">
+                <motion.div
+                    className="tech-grid"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once:true }}
+                >
 
                     {techs.map((tech, index) => (
 
-                        <div className="tech-card" key={index}>
+                        <motion.div
+                            className="tech-card"
+                            variants={fadeUp}
+                            key={index}
+                        >
 
                             <div className="tech-icon">
                                 {tech.icon}
@@ -113,11 +126,11 @@ function Technologies() {
 
                             </div>
 
-                        </div>
+                        </motion.div>
 
                     ))}
 
-                </div>
+                </motion.div>
 
             </div>
 

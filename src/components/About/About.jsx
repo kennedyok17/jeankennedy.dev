@@ -1,8 +1,18 @@
+import { motion } from "framer-motion";
+
 import "./About.css";
+import { fadeUp } from "../../animations";
 
 function About() {
     return (
-        <section className="about" id="about">
+        <motion.section
+            className="about"
+            id="about"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once:true }}
+        >
 
             <div className="about-container">
 
@@ -64,7 +74,7 @@ function About() {
 
             </div>
 
-        </section>
+        </motion.section>
     );
 }
 

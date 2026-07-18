@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
+
 import "./Contact.css";
+import { fadeUp } from "../../animations";
 
 import {
     FaGithub,
@@ -10,7 +13,14 @@ function Contact() {
 
     return (
 
-        <section className="contact" id="contact">
+        <motion.section
+            className="contact"
+            id="contact"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once:true }}
+        >
 
             <div className="contact-container">
 
@@ -101,7 +111,7 @@ function Contact() {
 
             </div>
 
-        </section>
+        </motion.section>
 
     );
 
