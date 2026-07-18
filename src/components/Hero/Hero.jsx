@@ -1,5 +1,6 @@
 import "./Hero.css";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import profile from "../../assets/images/sinperfil.png";
 
 function Hero() {
     return (
@@ -8,37 +9,55 @@ function Hero() {
             <div className="hero-light"></div>
             <div className="hero-grid"></div>
 
-            <div className="hero-content">
+            <div className="hero-container">
 
-                <p className="hero-tag">
-                    Bienvenido a mi portafolio
-                </p>
+                <div className="hero-left">
 
-                <h1>
-                    Hola, soy <span>Jean Kennedy</span>
-                </h1>
+                    <p className="hero-tag">
+                        Bienvenido a mi portafolio
+                    </p>
 
-                <h2>
-                    Intento de Desarrollador
-                </h2>
+                    <h1>
+                        Hola, soy <span>Jean Kennedy</span>
+                    </h1>
 
-                <p className="hero-description">
-                    Desarrollando aplicaciones web utilizando
-                    Java, Spring Boot, React y MySQL.
-                </p>
+                    <h2>
+                        Intento de Desarrollador
+                    </h2>
 
-                <div className="hero-buttons">
+                    <p className="hero-description">
+                        Desarrollando aplicaciones web utilizando
+                        Java, Spring Boot, React y MySQL.
+                    </p>
 
-                    <button className="btn-primary">
-                        Ver proyectos
-                    </button>
+                    <div className="hero-buttons">
 
-                    <button className="btn-secondary">
-                        Contacto
-                    </button>
+                        <button className="btn-primary">
+                            Ver proyectos
+                        </button>
+
+                        <button className="btn-secondary">
+                            Contacto
+                        </button>
+
+                    </div>
+
+                    <SocialLinks />
 
                 </div>
-                <SocialLinks />
+
+                <div className="hero-right">
+
+                    <div className="profile-card">
+
+                        <img
+                            src={profile}
+                            alt="Jean Kennedy"
+                        />
+
+                    </div>
+
+                </div>
 
             </div>
 
