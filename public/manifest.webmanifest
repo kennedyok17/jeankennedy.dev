@@ -3,5 +3,12 @@
   "short_name": "JK",
   "theme_color": "#0B0F14",
   "background_color": "#0B0F14",
-  "display": "standalone"
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
 }

@@ -26,16 +26,24 @@
 
     display:grid;
 
-    gap:40px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    justify-items:center;
+
+    gap:30px;
 }
 
 .project-card{
 
     position:relative;
 
+    width:100%;
+
+    max-width:380px;
+
     overflow:hidden;
 
-    padding:30px;
+    padding:24px;
 
     background:var(--glass);
 
@@ -409,4 +417,94 @@
     font-size:.85rem;
 
     margin-top:4px;
+}
+
+/* ============================= */
+/* MODAL DE DETALLE */
+/* ============================= */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.7);
+
+    backdrop-filter:blur(6px);
+}
+
+.modal-content{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1000px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+
+.modal-close{
+
+    position:absolute;
+
+    top:16px;
+
+    right:16px;
+
+    z-index:1;
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    border-radius:50%;
+
+    color:var(--text-primary);
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.modal-close:hover{
+
+    color:var(--primary);
+
+    border-color:var(--primary);
 }

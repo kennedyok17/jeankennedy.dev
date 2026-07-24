@@ -13,43 +13,36 @@ function Navbar() {
 
     useEffect(() => {
 
+        const sections = document.querySelectorAll("section[id]");
+
         const handleScroll = () => {
 
             setScrolled(window.scrollY > 50);
 
+            let current = "";
+
+            sections.forEach((section) => {
+
+                const rect = section.getBoundingClientRect();
+
+                if (rect.top <= 120 && rect.bottom > 120) {
+
+                    current = section.id;
+
+                }
+
+            });
+
+            setActiveSection(current);
+
         };
+
+        handleScroll();
 
         window.addEventListener("scroll", handleScroll);
 
         return () =>
             window.removeEventListener("scroll", handleScroll);
-
-    }, []);
-
-    useEffect(() => {
-
-        const sections = document.querySelectorAll("section[id]");
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        setActiveSection(entry.target.id);
-
-                    }
-
-                });
-
-            },
-            { rootMargin: "-40% 0px -55% 0px" }
-        );
-
-        sections.forEach((section) => observer.observe(section));
-
-        return () => observer.disconnect();
 
     }, []);
 

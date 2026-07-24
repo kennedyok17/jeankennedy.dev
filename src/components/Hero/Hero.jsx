@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 
 import "./Hero.css";
 import SocialLinks from "../SocialLinks/SocialLinks";
-import profile from "../../assets/images/sinperfil.png";
-import { fadeLeft, fadeRight } from "../../animations";
+import { fadeLeft } from "../../animations";
 
 function Hero() {
     return (
@@ -55,27 +54,6 @@ function Hero() {
                     </div>
 
                     <SocialLinks />
-
-                </motion.div>
-
-                <motion.div
-                    className="hero-right"
-                    variants={fadeRight}
-                    initial="hidden"
-                    animate="show"
-                    transition={{ delay:.2 }}
-                >
-
-                    <div className="profile-card">
-
-                        <img
-                            src={profile}
-                            alt="Jean Kennedy"
-                            fetchPriority="high"
-                            decoding="async"
-                        />
-
-                    </div>
 
                 </motion.div>
 

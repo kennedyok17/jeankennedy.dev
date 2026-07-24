@@ -24,19 +24,15 @@ function About() {
                     </span>
 
                     <h2 className="section-title">
-                        Construyendo soluciones web modernas
+                        Transformando ideas en soluciones
                     </h2>
 
                     <p>
-                        Soy desarrollador backend apasionado por crear
-                        aplicaciones escalables utilizando Java,
-                        Spring Boot, React y MySQL.
-                    </p>
-
-                    <p>
-                        Disfruto aprender nuevas tecnologías,
-                        resolver problemas y desarrollar proyectos
-                        que aporten valor real.
+                        Mi objetivo es seguir fortaleciendo mis habilidades
+                        en desarrollo de software y redes informáticas,
+                        participando en proyectos que representen nuevos
+                        desafíos y me permitan contribuir con soluciones
+                        tecnológicas de valor.
                     </p>
 
                     <button className="btn-primary">
@@ -67,7 +63,7 @@ function About() {
 
                         <h3>Ubicación</h3>
 
-                        <p><FaMapMarkerAlt />Perú</p>
+                        <p><FaMapMarkerAlt />Lima - Perú</p>
 
                     </div>
 
