@@ -35,9 +35,26 @@ function About() {
                         tecnológicas de valor.
                     </p>
 
-                    <button className="btn-primary">
-                        Descargar CV
-                    </button>
+                    <div className="about-cv-buttons">
+
+                        <a
+                            href="/cv/CV_Jean_KennedyV2.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-secondary"
+                        >
+                            Ver CV
+                        </a>
+
+                        <a
+                            href="/cv/CV_Jean_KennedyV2.pdf"
+                            download="Jean_Kennedy_CV.pdf"
+                            className="btn-primary"
+                        >
+                            Descargar CV
+                        </a>
+
+                    </div>
 
                 </div>
 

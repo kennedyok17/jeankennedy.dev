@@ -3,15 +3,12 @@ import "./SocialLinks.css";
 import {
     FaGithub,
     FaLinkedin,
+    FaFilePdf,
 } from "react-icons/fa";
 
 import {
     MdEmail
 } from "react-icons/md";
-
-import {
-    HiOutlineDocumentText
-} from "react-icons/hi";
 
 import { toast } from "sonner";
 
@@ -53,8 +50,13 @@ function SocialLinks() {
                 <MdEmail />
             </button>
 
-            <a href="#">
-                <HiOutlineDocumentText />
+            <a
+                href="/cv/CV_Jean_KennedyV2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver CV"
+            >
+                <FaFilePdf />
             </a>
 
         </div>
