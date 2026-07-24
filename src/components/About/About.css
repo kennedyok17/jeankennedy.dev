@@ -1,9 +1,19 @@
 .about{
 
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     padding:120px 20px;
 }
 
 .about-container{
+
+    width:100%;
 
     max-width:1200px;
 
@@ -39,6 +49,8 @@
 .about-left p{
 
     color:var(--text-secondary);
+
+    font-size:1.25rem;
 
     line-height:1.8;
 
@@ -83,7 +95,57 @@
 
 .info-card p{
 
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
     color:var(--text-secondary);
+}
+
+.info-card p svg{
+
+    color:var(--primary);
+}
+
+.info-list{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+.info-list li{
+
+    position:relative;
+
+    padding-left:16px;
+
+    color:var(--text-secondary);
+}
+
+.info-list li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:.6em;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--primary);
 }
 
 @media(max-width:768px){

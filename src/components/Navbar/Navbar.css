@@ -66,6 +66,14 @@
     object-fit: contain;
 }
 
+.logo-badge {
+    font-size: 1.4rem;
+
+    color: var(--primary);
+
+    filter: drop-shadow(0 0 4px rgba(45, 212, 191, .6));
+}
+
 .logo span {
     font-size: 1.35rem;
     font-weight: 700;

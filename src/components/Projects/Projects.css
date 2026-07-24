@@ -1,11 +1,21 @@
 .projects{
 
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     padding:120px 20px;
 
     scroll-margin-top:100px;
 }
 
 .projects-container{
+
+    width:100%;
 
     max-width:1200px;
 

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 import "./About.css";
 import { fadeUp } from "../../animations";
@@ -48,17 +49,25 @@ function About() {
 
                     <div className="info-card">
 
-                        <h3>Ubicación</h3>
+                        <h3>Actualmente</h3>
 
-                        <p>Perú 🇵🇪</p>
+                        <ul className="info-list">
+
+                            <li>Estudiante de Ingeniería de Sistemas e Informática</li>
+
+                            <li>Desarrollando un sistema ERP</li>
+
+                            <li>Aprendizaje continuo de nuevas tecnologías</li>
+
+                        </ul>
 
                     </div>
 
                     <div className="info-card">
 
-                        <h3>Especialidad</h3>
+                        <h3>Ubicación</h3>
 
-                        <p>Backend Developer</p>
+                        <p><FaMapMarkerAlt />Perú</p>
 
                     </div>
 

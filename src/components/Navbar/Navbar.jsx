@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
+import { MdVerified } from "react-icons/md";
 
 import "./Navbar.css";
 import logo from "../../assets/logos/logo-jk.png";
@@ -67,6 +68,12 @@ function Navbar() {
                     <img src={logo} alt="Logo JK" loading="lazy" decoding="async" />
 
                     <span>Jean Kennedy</span>
+
+                    <MdVerified
+                        className="logo-badge"
+                        title="Disponible para nuevas oportunidades"
+                        aria-label="Disponible para nuevas oportunidades"
+                    />
 
                 </a>
 

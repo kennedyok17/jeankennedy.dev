@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Toaster } from "sonner";
 
 import "./App.css";
 
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <Toaster position="bottom-right" richColors />
       <div className="cursor-spotlight" aria-hidden="true"></div>
       <Navbar />
       <Hero />

@@ -21,66 +21,76 @@ import {
 
 function Technologies() {
 
-    const techs = [
+    const techCategories = [
         {
-            icon: <FaJava />,
-            title: "Java",
-            description: "Backend Development",
-            level: "46%"
+            category: "Frontend",
+            items: [
+                {
+                    icon: <FaReact />,
+                    title: "React",
+                    description: "Modern Frontend"
+                },
+                {
+                    icon: <SiJavascript />,
+                    title: "JavaScript",
+                    description: "Web Development"
+                },
+                {
+                    icon: <SiHtml5 />,
+                    title: "HTML5",
+                    description: "Markup"
+                },
+                {
+                    icon: <SiCss />,
+                    title: "CSS3",
+                    description: "Responsive Design"
+                }
+            ]
         },
         {
-            icon: <SiSpringboot />,
-            title: "Spring Boot",
-            description: "REST APIs",
-            level: "42%"
+            category: "Backend",
+            items: [
+                {
+                    icon: <FaJava />,
+                    title: "Java",
+                    description: "Backend Development"
+                },
+                {
+                    icon: <SiSpringboot />,
+                    title: "Spring Boot",
+                    description: "REST APIs"
+                },
+                {
+                    icon: <SiPhp />,
+                    title: "PHP",
+                    description: "Backend Development"
+                },
+                {
+                    icon: <SiPython />,
+                    title: "Python",
+                    description: "Scripting & Datos"
+                }
+            ]
         },
         {
-            icon: <FaReact />,
-            title: "React",
-            description: "Modern Frontend",
-            level: "50%"
+            category: "Base de datos",
+            items: [
+                {
+                    icon: <SiMysql />,
+                    title: "MySQL",
+                    description: "Database"
+                }
+            ]
         },
         {
-            icon: <SiMysql />,
-            title: "MySQL",
-            description: "Database",
-            level: "48%"
-        },
-        {
-            icon: <SiJavascript />,
-            title: "JavaScript",
-            description: "Web Development",
-            level: "45%"
-        },
-        {
-            icon: <SiHtml5 />,
-            title: "HTML5",
-            description: "Markup",
-            level: "55%"
-        },
-        {
-            icon: <SiCss />,
-            title: "CSS3",
-            description: "Responsive Design",
-            level: "50%"
-        },
-        {
-            icon: <FaGitAlt />,
-            title: "Git",
-            description: "Version Control",
-            level: "42%"
-        },
-        {
-            icon: <SiPhp />,
-            title: "PHP",
-            description: "Backend Development",
-            level: "35%"
-        },
-        {
-            icon: <SiPython />,
-            title: "Python",
-            description: "Scripting & Datos",
-            level: "35%"
+            category: "Herramientas",
+            items: [
+                {
+                    icon: <FaGitAlt />,
+                    title: "Git",
+                    description: "Version Control"
+                }
+            ]
         }
     ];
 
@@ -97,54 +107,58 @@ function Technologies() {
                     </span>
 
                     <h2 className="section-title">
-                        Herramientas con las que desarrollo
+                        Tecnologías con las que trabajé
                     </h2>
 
                     <p>
-                        Estas son las tecnologías que utilizo para crear
-                        aplicaciones modernas, escalables y mantenibles.
+                        Estas son las tecnologías con las que he tenido la
+                        oportunidad de trabajar, y en las que sigo aprendiendo
+                        y mejorando día a día.
                     </p>
 
                 </div>
 
-                <motion.div
-                    className="tech-grid"
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once:true }}
-                >
+                {techCategories.map((group) => (
 
-                    {techs.map((tech, index) => (
+                    <div className="tech-category" key={group.category}>
+
+                        <h3 className="tech-category-title">
+                            {group.category}
+                        </h3>
 
                         <motion.div
-                            className="tech-card"
-                            variants={fadeUp}
-                            key={index}
+                            className="tech-grid"
+                            variants={staggerContainer}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once:true }}
                         >
 
-                            <div className="tech-icon">
-                                {tech.icon}
-                            </div>
+                            {group.items.map((tech, index) => (
 
-                            <h3>{tech.title}</h3>
+                                <motion.div
+                                    className="tech-card"
+                                    variants={fadeUp}
+                                    key={index}
+                                >
 
-                            <p>{tech.description}</p>
+                                    <div className="tech-icon">
+                                        {tech.icon}
+                                    </div>
 
-                            <div className="progress">
+                                    <h3>{tech.title}</h3>
 
-                                <div
-                                    className="progress-fill"
-                                    style={{ width: tech.level }}
-                                ></div>
+                                    <p>{tech.description}</p>
 
-                            </div>
+                                </motion.div>
+
+                            ))}
 
                         </motion.div>
 
-                    ))}
+                    </div>
 
-                </motion.div>
+                ))}
 
             </div>
 

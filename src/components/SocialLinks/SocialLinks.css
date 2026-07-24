@@ -9,7 +9,8 @@
     margin-top:45px;
 }
 
-.social-links a{
+.social-links a,
+.social-links button{
 
     width:52px;
     height:52px;
@@ -31,15 +32,19 @@
 
     backdrop-filter:blur(12px);
 
+    cursor:pointer;
+
     transition:.3s;
 }
 
-.social-links a svg{
+.social-links a svg,
+.social-links button svg{
 
     font-size:1.35rem;
 }
 
-.social-links a:hover{
+.social-links a:hover,
+.social-links button:hover{
 
     color:var(--primary);
 

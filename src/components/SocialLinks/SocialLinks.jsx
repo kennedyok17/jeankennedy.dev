@@ -13,6 +13,17 @@ import {
     HiOutlineDocumentText
 } from "react-icons/hi";
 
+import { toast } from "sonner";
+
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText("jean@jeankennedy.dev");
+    toast.success("Correo copiado");
+  } catch {
+    toast.error("No se pudo copiar el correo");
+  }
+};
+
 function SocialLinks() {
 
     return (
@@ -28,16 +39,19 @@ function SocialLinks() {
             </a>
 
             <a
-                href="https://www.linkedin.com/in/kennedyook17/"
+                href="https://www.linkedin.com/in/jkennedyok17/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 <FaLinkedin />
             </a>
 
-            <a href="mailto:jeankennedyortizvelasquez@gmail.com">
+            <button
+                onClick={copyEmail}
+                aria-label="Copiar correo"
+            >
                 <MdEmail />
-            </a>
+            </button>
 
             <a href="#">
                 <HiOutlineDocumentText />

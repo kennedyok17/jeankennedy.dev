@@ -30,12 +30,16 @@ function Hero() {
                     </h1>
 
                     <h2>
-                        Intento de Desarrollador
+                        Desarrollador de Software | Redes Informáticas
                     </h2>
 
                     <p className="hero-description">
-                        Desarrollando aplicaciones web utilizando
-                        Java, Spring Boot, React y MySQL.
+                        Soy estudiante de Ingeniería de Sistemas 
+                        e Informática, apasionado por la tecnología 
+                        y el aprendizaje continuo. Me interesa el desarrollo 
+                        de software y las redes informáticas, áreas en las que 
+                        busco fortalecer mis conocimientos para contribuir con 
+                        soluciones tecnológicas eficientes e innovadoras.
                     </p>
 
                     <div className="hero-buttons">
