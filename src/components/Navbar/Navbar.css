@@ -151,11 +151,13 @@
         top:110px;
         right:-100%;
 
-        width:280px;
+        width:100%;
 
         height:calc(100vh - 110px);
 
-        background:#0F172A;
+        background:var(--background);
+
+        border-top:1px solid var(--border);
 
         display:flex;
 
@@ -163,11 +165,9 @@
 
         align-items:center;
 
-        justify-content:flex-start;
+        justify-content:center;
 
         gap:35px;
-
-        padding-top:50px;
 
         transition:.35s ease;
     }
@@ -175,6 +175,11 @@
     .nav-links.active{
 
         right:0;
+    }
+
+    .nav-links a{
+
+        font-size:1.3rem;
     }
 
 }
